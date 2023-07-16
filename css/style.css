@@ -1,0 +1,103 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --bg:#bc48ff;
+    --margin-top: 100px;
+    --logo:#00ff55;
+}
+.navbar{
+    background-color: var(--bg);
+}
+.logo{
+    font-style: italic;
+    color: var(--logo);
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.my-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}  
+.icon{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.icon a{
+    text-decoration: none;
+    color:inherit;
+    
+}
+.separator{
+    flex-grow: 1;
+    border: none;
+    border-top: 2px solid #000000;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+.highlight{
+    font-weight: bold;
+    font-size: larger; 
+}
+.save-button{
+    background-color: var(--bg);
+}
+.save-button:hover {
+    background-color: #8806d4;
+}
+
+.total-value{
+    color: #8806d4;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.button-image {
+    width: 20px; /* Defina a largura desejada */
+    height: 20px; /* Defina a altura desejada */
+}
+
+.order li{
+    font-size: 0.7rem;
+}
+.custom-bg{
+    background-color: #f2f2f2f2;
+}
+
+.image-style {
+    width: 100px;
+    height: auto;
+}
+
+paypal.Buttons({
+    createOrder: function(data, actions) {
+        // Função chamada ao clicar no botão PayPal
+        // Você pode adicionar a lógica aqui para criar a ordem de pagamento
+    },
+    style: {
+        color: 'gold',
+        shape: 'rect',
+        label: 'paypal',
+        layout: 'horizontal',
+        tagline: false
+    }
+}).render('body');
+
+/* .container li{
+    list-style: none;
+    margin-right: 10px;    
+}
+.container hr{
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #000;
+    margin: 0 10px;
+    } */
+
